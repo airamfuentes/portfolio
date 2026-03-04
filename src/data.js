@@ -1,155 +1,110 @@
-import HeroImage from "/assets/hero-img.webp";
-
-const Image = {
-  HeroImage,
-};
-
-export default Image;
-
-import Tools1 from "/assets/tools/vscode.png";
-import Tools2 from "/assets/tools/reactjs.png";
-import Tools3 from "/assets/tools/nextjs.png";
-import Tools4 from "/assets/tools/tailwind.png";
-import Tools5 from "/assets/tools/bootstrap.png";
-import Tools6 from "/assets/tools/js.png";
-import Tools7 from "/assets/tools/nodejs.png";
-import Tools8 from "/assets/tools/github.png";
-import Tools10 from "/assets/tools/canva.png";
-import Tools11 from "/assets/tools/figma.png";
-import Tools13 from "/assets/tools/firebase.png";
-import Tools14 from "/assets/tools/html.png";
-import Tools15 from "/assets/tools/css.png";
-import Tools17 from "/assets/tools/php.png";
-import Tools18 from "/assets/tools/vite.png";
-import Tools19 from "/assets/tools/mysql.png";
-
-
 export const listTools = [
   {
     id: 1,
-    gambar: Tools1,
+    gambar: "/assets/tools/vscode.png",
     nama: "Visual Studio Code",
     ket: "Code Editor",
     dad: "100",
   },
   {
     id: 2,
-    gambar: Tools2,
+    gambar: "/assets/tools/reactjs.png",
     nama: "React JS",
     ket: "Framework",
     dad: "200",
   },
   {
     id: 4,
-    gambar: Tools4,
+    gambar: "/assets/tools/tailwind.png",
     nama: "Tailwind CSS",
     ket: "Framework",
     dad: "400",
   },
   {
     id: 5,
-    gambar: Tools5,
+    gambar: "/assets/tools/bootstrap.png",
     nama: "Bootstrap",
     ket: "Framework",
     dad: "500",
   },
   {
     id: 6,
-    gambar: Tools6,
+    gambar: "/assets/tools/js.png",
     nama: "Javascript",
     ket: "Language",
     dad: "600",
   },
   {
     id: 7,
-    gambar: Tools7,
+    gambar: "/assets/tools/nodejs.png",
     nama: "Node JS",
     ket: "Javascript Runtime",
     dad: "700",
   },
   {
     id: 8,
-    gambar: Tools8,
+    gambar: "/assets/tools/github.png",
     nama: "Github",
     ket: "Repository",
     dad: "800",
   },
   {
     id: 10,
-    gambar: Tools10,
+    gambar: "/assets/tools/canva.png",
     nama: "Canva",
     ket: "Design App",
     dad: "1000",
   },
   {
     id: 11,
-    gambar: Tools11,
+    gambar: "/assets/tools/figma.png",
     nama: "Figma",
     ket: "Design App",
     dad: "1100",
   },
   {
     id: 13,
-    gambar: Tools13,
+    gambar: "/assets/tools/firebase.png",
     nama: "Firebase",
-    ket: "Framework",
+    ket: "Backend",
     dad: "1300",
   },
   {
     id: 14,
-    gambar: Tools14,
+    gambar: "/assets/tools/html.png",
     nama: "HTML",
     ket: "Language",
     dad: "1400",
   },
   {
     id: 15,
-    gambar: Tools15,
+    gambar: "/assets/tools/css.png",
     nama: "CSS",
     ket: "Language",
     dad: "1500",
   },
   {
     id: 17,
-    gambar: Tools17,
+    gambar: "/assets/tools/php.png",
     nama: "PHP",
     ket: "Language",
     dad: "1700",
   },
   {
     id: 18,
-    gambar: Tools18,
+    gambar: "/assets/tools/vite.png",
     nama: "Vite",
-    ket: "Framework",
+    ket: "Build Tool",
     dad: "1800",
   },
   {
     id: 19,
-    gambar: Tools19,
+    gambar: "/assets/tools/mysql.png",
     nama: "MySql",
-    ket: "Framework",
+    ket: "Database",
     dad: "1900",
   },
 ];
 
-import Proyek1 from "/assets/proyek/proyek1.jpg";
-import Proyek2 from "/assets/proyek/proyek2.jpg";
-import Proyek3 from "/assets/proyek/proyek3.jpg";
-import Proyek4 from "/assets/proyek/proyek4.jpg";
-import Proyek5 from "/assets/proyek/proyek5.jpg";
-import Proyek6 from "/assets/proyek/proyek6.jpg";
+export const listProyek = [];
 
-export const listProyek = [
- // {
-   // id: 1,
-   // image: Proyek1,
-   // title: "Website Portfolio Statamic Docentes",
-   // subtitle: "Simple portfolio website using ",
-   // fullDescription:"A mobile application powered by Artificial Intelligence and Machine Learning, developed to assist in the early detection of Adolescent Idiopathic Scoliosis (AIS). By analyzing patient data and patterns, the app provides predictions that can help doctors and patients take preventive measures. This project demonstrates the role of AI in modern healthcare by improving accuracy, accessibility, and efficiency in medical diagnosis.",
-   // borderColor: "#3B82F6",
-   // gradient: "linear-gradient(145deg, #3B82F6, #000)",
-   // url: "https://github.com/rissss21",
-  //  dad: "100",
- // },
-  
-];
