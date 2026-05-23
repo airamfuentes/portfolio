@@ -171,7 +171,7 @@ function App() {
         <div className="proyek mt-32 py-10" id="project" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true"></div>
         <h1 className="text-center text-4xl font-bold mb-2" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">Proyectos</h1>
         <p className="text-base/loose text-center opacity-50" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" data-aos-once="true">Algunas ideas y trabajos que desarrolle o sigo en proceso</p>
-        <p className="text-center text-yellow-300 mt-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400" data-aos-once="true">En producción... más proyectos pronto</p>
+        <p className="text-center text-yellow-300 mt-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400" data-aos-once="true">Más proyectos próximamente</p>
         <div className="proyek-box mt-14" >
 
           <div style={{ height: 'auto', position: 'relative' }} data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400" data-aos-once="true" >

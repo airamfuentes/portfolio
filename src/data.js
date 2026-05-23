@@ -106,5 +106,18 @@ export const listTools = [
   },
 ];
 
-export const listProyek = [];
+export const listProyek = [
+  {
+    image: "https://opengraph.githubassets.com/1/airamfuentes/rustikan",
+    title: "Rustikan",
+    subtitle: "Plataforma de comercio local y sostenible en Lanzarote",
+    handle: "#Laravel · #Vue3 · #Inertia",
+    location: "Lanzarote, España",
+    borderColor: "#7c3aed",
+    gradient: "linear-gradient(135deg, #1e1b2e 0%, #2d1b4e 50%, #0f172a 100%)",
+    fullDescription:
+      "Rustikan es una plataforma de marketplace y entrega de comida local que conecta productores, agricultores y artesanos de Lanzarote con consumidores. Incluye sistema de pagos con Stripe y Rusticoin (moneda propia), seguimiento de pedidos, chat en vivo, panel de productor, panel de almacén y panel de administración. Desarrollada con Laravel 12, Vue 3, Inertia.js, Tailwind CSS y MySQL. Multilingüe: español, inglés, francés, alemán e italiano.",
+    url: "https://github.com/airamfuentes/rustikan",
+  },
+];
 
