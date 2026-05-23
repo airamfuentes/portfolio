@@ -104,6 +104,55 @@ export const listTools = [
     ket: "Database",
     dad: "1900",
   },
+  {
+    id: 20,
+    gambar: "/assets/tools/laravel.svg",
+    nama: "Laravel",
+    ket: "Framework",
+    dad: "2000",
+  },
+  {
+    id: 21,
+    gambar: "/assets/tools/vuejs.svg",
+    nama: "Vue JS",
+    ket: "Framework",
+    dad: "2100",
+  },
+  {
+    id: 22,
+    gambar: "/assets/tools/inertia.svg",
+    nama: "Inertia.js",
+    ket: "Full-Stack Bridge",
+    dad: "2200",
+  },
+  {
+    id: 23,
+    gambar: "/assets/tools/cloudflare.svg",
+    nama: "Cloudflare",
+    ket: "CDN / DNS",
+    dad: "2300",
+  },
+  {
+    id: 24,
+    gambar: "/assets/tools/stripe.svg",
+    nama: "Stripe",
+    ket: "Pagos",
+    dad: "2400",
+  },
+  {
+    id: 25,
+    gambar: "/assets/tools/resend.svg",
+    nama: "Resend",
+    ket: "Email API",
+    dad: "2500",
+  },
+  {
+    id: 26,
+    gambar: "/assets/tools/leaflet.svg",
+    nama: "Leaflet",
+    ket: "Mapas interactivos",
+    dad: "2600",
+  },
 ];
 
 export const listProyek = [
