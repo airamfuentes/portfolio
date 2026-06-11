@@ -9,7 +9,7 @@ import { MeshLineGeometry, MeshLineMaterial } from 'meshline';
 // replace with your own imports, see the usage snippet for details
 const cardGLB = "/assets/card.glb";
 const lanyard = "/assets/lanyard.png";
-const profilePic = "/assets/foto_perfil.png";
+const profilePic = "/assets/profile_photo.jpg";
 
 import * as THREE from 'three';
 import './Lanyard.css';

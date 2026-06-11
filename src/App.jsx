@@ -99,7 +99,7 @@ function App() {
               handle="airamfuentes"
               status="Coding..."
               contactText="Contáctame"
-              avatarUrl="./assets/foto_perfil.png"
+              avatarUrl="./assets/profile_photo.jpg"
               showUserInfo={true}
               enableTilt={true}
               enableMobileTilt={false}
