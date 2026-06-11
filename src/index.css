@@ -3,53 +3,136 @@
 @layer base {
   body {
     font-family: "Poppins", sans-serif;
+    transition: background-color 0.4s ease, color 0.4s ease;
   }
+}
+
+/* ── Scrollbar ──────────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #8b5cf6, #06b6d4);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #a78bfa, #22d3ee);
+}
+
+/* ── Selección de texto ─────────────────────────────────────────── */
+::selection {
+  background: rgba(139, 92, 246, 0.35);
+  color: #fff;
 }
 
 /* ── Light mode ─────────────────────────────────────────────────── */
 :root.light body {
-  background-color: #f4f4f5;
+  background-color: #fafafa;
   color: #18181b;
 }
 
 :root.light .light-card {
-  background: rgba(255, 255, 255, 0.7) !important;
-  border-color: rgba(0, 0, 0, 0.1) !important;
+  background: rgba(255, 255, 255, 0.85) !important;
+  border-color: rgba(0, 0, 0, 0.08) !important;
   color: #18181b;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06) !important;
 }
 
+:root.light .light-card h2,
+:root.light .light-card h3,
 :root.light .light-card p,
-:root.light .light-card span {
-  color: #3f3f46;
+:root.light .light-card span:not(.theme-toggle__stars span):not([class*="bg-clip-text"]) {
+  color: #27272a;
 }
 
-:root.light .bg-zinc-900\/60 {
-  background-color: rgba(255, 255, 255, 0.7) !important;
+:root.light .text-white {
+  color: #18181b !important;
 }
 
-:root.light .border-zinc-700 {
-  border-color: rgba(0, 0, 0, 0.12) !important;
-}
-
+:root.light .text-gray-300,
 :root.light .text-zinc-400 {
   color: #52525b !important;
 }
 
+:root.light .bg-zinc-900\/60,
+:root.light .bg-zinc-900\/80 {
+  background-color: rgba(255, 255, 255, 0.85) !important;
+}
+
+:root.light .bg-zinc-800\/60,
+:root.light .bg-zinc-800 {
+  background-color: rgba(0, 0, 0, 0.04) !important;
+}
+
+:root.light .border-zinc-700,
+:root.light .border-zinc-600 {
+  border-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+:root.light .bg-\[\#1a1a1a\] {
+  background-color: #f4f4f5 !important;
+  color: #18181b !important;
+}
+
+:root.light .bg-\[\#1a1a1a\]:hover {
+  background-color: #e4e4e7 !important;
+}
+
+:root.light .border-gray-700 {
+  border-color: rgba(0, 0, 0, 0.1) !important;
+}
+
 :root.light input,
 :root.light textarea {
-  background-color: rgba(0, 0, 0, 0.05) !important;
+  background-color: rgba(0, 0, 0, 0.04) !important;
   color: #18181b !important;
-  border-color: rgba(0, 0, 0, 0.15) !important;
+  border-color: rgba(0, 0, 0, 0.12) !important;
 }
 
-:root.light .bg-zinc-800\/60 {
-  background-color: rgba(0, 0, 0, 0.06) !important;
+:root.light input::placeholder,
+:root.light textarea::placeholder {
+  color: #71717a !important;
 }
 
+:root.light nav h1,
 :root.light nav a {
   color: #18181b;
 }
 
-:root.light .pc-card {
-  background-image: radial-gradient(farthest-side circle at var(--pointer-x) var(--pointer-y), hsla(266, 100%, 70%, var(--card-opacity)) 4%, hsla(266, 50%, 60%, calc(var(--card-opacity) * 0.75)) 10%, hsla(266, 25%, 50%, calc(var(--card-opacity) * 0.5)) 50%, hsla(266, 0%, 40%, 0) 100%), radial-gradient(35% 52% at 55% 20%, #00ffaac4 0%, #073aff00 100%), radial-gradient(100% 100% at 50% 50%, #00c1ffff 1%, #073aff00 76%), conic-gradient(from 124deg at 50% 50%, #c137ffff 0%, #07c6ffff 40%, #07c6ffff 60%, #c137ffff 100%);
+:root.light .bg-gradient-to-br.from-\[\#0a0a0a\] {
+  background: linear-gradient(135deg, #ffffff 0%, #f4f4f5 50%, #fafafa 100%) !important;
+}
+
+:root.light .shadow-\[0_0_30px_rgba\(168\,85\,247\,0\.4\)\] {
+  box-shadow: 0 0 30px rgba(168, 85, 247, 0.18) !important;
+}
+
+/* Aurora atenuada en modo claro */
+:root.light .aurora-wrapper {
+  opacity: 0.35;
+}
+
+/* Tool card icon backgrounds */
+:root.light .bg-zinc-900 {
+  background-color: rgba(0, 0, 0, 0.04) !important;
+}
+
+/* ── Glow heading helper ─────────────────────────────────────────── */
+.text-glow {
+  text-shadow: 0 0 24px rgba(139, 92, 246, 0.45);
+}
+
+/* ── Section divider gradient ───────────────────────────────────── */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(139, 92, 246, 0.5) 50%,
+    transparent 100%
+  );
+  margin: 4rem 0;
 }
