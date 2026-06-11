@@ -8,11 +8,12 @@ import Lanyard from "./components/Lanyard/Lanyard";
 import GlassIcons from "./components/GlassIcons/GlassIcons";
 import { listTools, listProyek } from "./data";
 import ChromaGrid from "./components/ChromaGrid/ChromaGrid";
-import ProjectModal from "./components/ProjectModal/ProjectModal"; // <-- IMPORT MODAL
+import ProjectModal from "./components/ProjectModal/ProjectModal";
 import Aurora from "./components/Aurora/Aurora";
+import Experience from "./components/Experience/Experience";
+import Contact from "./components/Contact/Contact";
 import AOS from 'aos';
-import 'aos/dist/aos.css'; // You can also use <link> for styles
-// ..
+import 'aos/dist/aos.css';
 AOS.init();
 
 function App() {
@@ -99,7 +100,7 @@ function App() {
               handle="airamfuentes"
               status="Coding..."
               contactText="Contáctame"
-              avatarUrl="./assets/profile_photo.jpg"
+              avatarUrl="./assets/profile_photo.webp"
               showUserInfo={true}
               enableTilt={true}
               enableMobileTilt={false}
@@ -107,7 +108,7 @@ function App() {
             />
           </div>
         </div>
-        <div className="mt-15 mx-auto w-full max-w-[1600px] rounded-3xl border-[5px] border-white-500/40 shadow-[0_0_30px_rgba(168,85,247,0.4)] bg-gradient-to-br from-[#0a0a0a] via-[#111111] to-[#1a1a1a] p-6" id="about">
+        <div className="mt-15 mx-auto w-full max-w-[1600px] rounded-3xl border-[5px] border-white-500/40 shadow-[0_0_30px_rgba(168,85,247,0.4)] bg-gradient-to-br from-[#0a0a0a] via-[#111111] to-[#1a1a1a] p-6 light-card" id="about">
           <div className="flex flex-col md:flex-row items-center justify-between gap-10 pt-0 px-8" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
             <div className="basis-full md:basis-7/12 pr-0 md:pr-8 border-b md:border-b-0 md:border-r border-white-500/30">
               <div className="flex-1 text-left">
@@ -146,7 +147,7 @@ function App() {
             {listTools.map((tool) => (
               <div
                 key={tool.id} data-aos="fade-up" data-aos-duration="1000" data-aos-delay={tool.dad} data-aos-once="true"
-                className="flex items-center gap-4 p-4 border border-zinc-700 rounded-xl bg-zinc-900/60 backdrop-blur-md hover:bg-zinc-800/80 transition-all duration-300 group shadow-lg"
+                className="flex items-center gap-4 p-4 border border-zinc-700 rounded-xl bg-zinc-900/60 backdrop-blur-md hover:bg-zinc-800/80 transition-all duration-300 group shadow-lg light-card"
               >
                 <img
                   src={tool.gambar}
@@ -186,6 +187,9 @@ function App() {
           </div>
         </div>
       </main>
+
+      <Experience />
+      <Contact />
 
       <ProjectModal
         isOpen={!!selectedProject}

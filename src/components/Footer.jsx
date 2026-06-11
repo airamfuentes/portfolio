@@ -1,12 +1,13 @@
 import "remixicon/fonts/remixicon.css";
 import Dock from "./Dock/Dock";
-import { VscHome, VscArchive, VscAccount } from "react-icons/vsc";
+import { VscHome, VscArchive, VscAccount, VscMail } from "react-icons/vsc";
 
 const Footer = () => {
   const items = [
     { icon: <VscHome size={18} />, label: "Inicio", onClick: () => document.getElementById("home")?.scrollIntoView({ behavior: "smooth" }) },
     { icon: <VscAccount size={18} />, label: "Sobre mí", onClick: () => document.getElementById("about")?.scrollIntoView({ behavior: "smooth" }) },
     { icon: <VscArchive size={18} />, label: "Proyectos", onClick: () => document.getElementById("project")?.scrollIntoView({ behavior: "smooth" }) },
+    { icon: <VscMail size={18} />, label: "Contacto", onClick: () => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" }) },
   ];
 
   return (
