@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import ProfileCard from "./components/ProfileCard/ProfileCard";
 import ShinyText from "./components/ShinyText/ShinyText";
 import BlurText from "./components/BlurText/BlurText";
@@ -15,8 +15,6 @@ import 'aos/dist/aos.css';
 AOS.init();
 
 function App() {
-  const aboutRef = useRef(null);
-  const [isVisible, setIsVisible] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
 
   const handleProjectClick = (project) => setSelectedProject(project);
@@ -29,20 +27,6 @@ function App() {
       const baseUrl = window.location.origin + "/";
       window.location.replace(baseUrl);
     }
-  }, []);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.2 }
-    );
-    if (aboutRef.current) observer.observe(aboutRef.current);
-    return () => observer.disconnect();
   }, []);
 
   return (
@@ -74,17 +58,26 @@ function App() {
             <div className="flex flex-wrap items-center sm:gap-4 gap-3">
               <a
                 href="#project"
-                className="font-semibold bg-violet-600 hover:bg-violet-500 p-4 px-6 rounded-full text-white transition-colors duration-300 shadow-lg shadow-violet-500/30"
+                className="font-semibold bg-violet-600 hover:bg-violet-500 p-4 px-6 rounded-full text-white transition-all duration-300 shadow-lg shadow-violet-500/30 hover:shadow-violet-500/50 hover:-translate-y-0.5"
               >
                 Ver proyectos
               </a>
               <a
                 href="#contact"
-                className="font-semibold bg-[#1a1a1a] p-4 px-6 rounded-full border border-gray-700 hover:bg-[#222] transition-colors"
+                className="font-semibold bg-[#1a1a1a] p-4 px-6 rounded-full border border-gray-700 hover:bg-[#222] hover:border-violet-500/50 transition-all hover:-translate-y-0.5"
               >
                 <ShinyText text="Contáctame" disabled={false} speed={3} className="custom-class" />
               </a>
             </div>
+
+            <a
+              href="#about"
+              aria-label="Desplázate hacia abajo"
+              className="hidden md:flex items-center gap-3 mt-12 opacity-60 hover:opacity-100 transition-opacity w-fit"
+            >
+              <span className="scroll-hint" />
+              <span className="text-sm">Desliza para conocerme</span>
+            </a>
           </div>
           <div className="md:ml-auto animate__animated animate__fadeInUp animate__delay-4s">
             <ProfileCard
@@ -117,15 +110,8 @@ function App() {
                   Sobre mí
                 </h2>
                 <BlurText
-                  text="Soy Airam Fuentes Falcón, nacido en Arrecife en 2005. Apasionado del desarrollo web, resolutivo y creativo. Estudio el segundo curso de DAW y trabajo en proyectos full-stack reales."
-                  delay={120}
-                  animateBy="words"
-                  direction="top"
-                  className="text-base md:text-lg leading-relaxed mb-6 text-gray-300"
-                />
-                <BlurText
-                  text="Empático, organizado y con don de gente: combino el lado técnico con la capacidad de trabajar en equipo y comunicarme con claridad."
-                  delay={120}
+                  text="Soy Airam Fuentes, estudiante y apasionado del desarrollo web. Fiel representante de que la innovación siempre es la clave y lo creativo siempre se impone"
+                  delay={150}
                   animateBy="words"
                   direction="top"
                   className="text-base md:text-lg leading-relaxed mb-10 text-gray-300"
@@ -146,7 +132,7 @@ function App() {
 
         {/* ── TOOLS ───────────────────────────────────────────── */}
         <div className="tools mt-32">
-          <h1 className="text-4xl/snug font-bold mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">Herramientas / Tecnologías</h1>
+          <h1 className="text-4xl/snug font-bold mb-4 gradient-text w-fit" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">Herramientas / Tecnologías</h1>
           <p className="md:w-2/5 text-base/loose opacity-50" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" data-aos-once="true">Mi stack principal</p>
           <div className="tools-box mt-14 grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
             {listTools.map((tool) => (
@@ -185,7 +171,7 @@ function App() {
 
         {/* ── PROYECTOS ──────────────────────────────────────── */}
         <div className="proyek mt-32 py-10" id="project" />
-        <h1 className="text-center text-4xl font-bold mb-2" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">Proyectos</h1>
+        <h1 className="text-center text-4xl font-bold mb-2 gradient-text w-fit mx-auto" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">Proyectos</h1>
         <p className="text-base/loose text-center opacity-50" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" data-aos-once="true">Algunas ideas y trabajos que desarrollé o sigo en proceso</p>
         <p className="text-center text-yellow-300 mt-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400" data-aos-once="true">Más proyectos próximamente</p>
         <div className="proyek-box mt-14">

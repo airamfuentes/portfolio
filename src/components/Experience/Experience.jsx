@@ -3,28 +3,7 @@ const experiences = [
     year: "2025 – 2026",
     role: "Web Developer en prácticas",
     company: "Zesei",
-    desc: "Desarrollo de aplicaciones web profesionales en entorno real, aplicando buenas prácticas y stack moderno.",
-    type: "work",
-  },
-  {
-    year: "2025 – 2026",
-    role: "Dependiente área tecnológica",
-    company: "Worten",
-    desc: "Atención al cliente y asesoramiento técnico en productos de electrónica e informática.",
-    type: "work",
-  },
-  {
-    year: "2024 – 2025",
-    role: "Monitor de pista",
-    company: "Gran Karting Lanzarote",
-    desc: "Gestión de actividad, atención al cliente y supervisión de seguridad en pista.",
-    type: "work",
-  },
-  {
-    year: "2023 – 2024",
-    role: "Reponedor",
-    company: "SuperDino Costa Teguise",
-    desc: "Gestión de stock, reposición y atención al cliente.",
+    desc: "Desarrollo de aplicaciones web profesionales en entorno real, aplicando buenas prácticas y stack moderno (Laravel, Vue, Inertia y MySQL).",
     type: "work",
   },
 ];
@@ -97,7 +76,7 @@ export default function Experience() {
       data-aos-duration="1000"
       data-aos-once="true"
     >
-      <h2 className="text-4xl font-bold mb-2">Trayectoria</h2>
+      <h2 className="text-4xl font-bold mb-2 gradient-text w-fit">Trayectoria</h2>
       <p className="text-base opacity-50 mb-12">Experiencia laboral y formación</p>
 
       <div className="grid md:grid-cols-2 gap-10">

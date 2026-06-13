@@ -182,14 +182,15 @@
 }
 
 .pc-avatar-content .avatar {
-  width: 140%;
-  height: 140%;
+  width: 100%;
+  height: 100%;
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -52%);
+  /* scaleX(-1) mirrors the selfie so it reads the right way round */
+  transform: translate(-50%, -50%) scaleX(-1);
   object-fit: cover;
-  object-position: center 22%;
+  object-position: center top;
   opacity: calc(1.75 - var(--pointer-from-center));
 }
 

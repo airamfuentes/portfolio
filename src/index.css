@@ -7,6 +7,17 @@
   }
 }
 
+/* ── Base theme (dark by default, before React applies a class) ───── */
+body {
+  background-color: #18181b; /* zinc-900 */
+  color: #ffffff;
+}
+
+:root.dark body {
+  background-color: #18181b;
+  color: #ffffff;
+}
+
 /* ── Scrollbar ──────────────────────────────────────────────────── */
 ::-webkit-scrollbar {
   width: 10px;
@@ -135,4 +146,62 @@
     transparent 100%
   );
   margin: 4rem 0;
+}
+
+/* ── Animated gradient text (headings) ──────────────────────────── */
+.gradient-text {
+  background: linear-gradient(90deg, #a78bfa, #22d3ee, #a78bfa);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: gradient-pan 6s linear infinite;
+}
+
+@keyframes gradient-pan {
+  to {
+    background-position: 200% center;
+  }
+}
+
+/* ── Scroll-down hint in hero ───────────────────────────────────── */
+.scroll-hint {
+  width: 26px;
+  height: 42px;
+  border: 2px solid currentColor;
+  border-radius: 14px;
+  position: relative;
+  opacity: 0.5;
+}
+.scroll-hint::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 8px;
+  width: 4px;
+  height: 8px;
+  border-radius: 4px;
+  background: currentColor;
+  transform: translateX(-50%);
+  animation: scroll-dot 1.6s ease-in-out infinite;
+}
+@keyframes scroll-dot {
+  0% { opacity: 0; transform: translate(-50%, 0); }
+  40% { opacity: 1; }
+  80% { opacity: 0; transform: translate(-50%, 14px); }
+  100% { opacity: 0; }
+}
+
+/* ── Tool card hover: subtle glow on the icon ───────────────────── */
+.tools-box .group:hover img {
+  filter: drop-shadow(0 0 8px rgba(139, 92, 246, 0.45));
+}
+
+/* ── Reveal-on-hover sheen for cards ────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .gradient-text,
+  .scroll-hint::after {
+    animation: none;
+  }
 }

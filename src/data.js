@@ -153,6 +153,55 @@ export const listTools = [
     ket: "Mapas interactivos",
     dad: "2600",
   },
+  {
+    id: 27,
+    gambar: "/assets/tools/typescript.svg",
+    nama: "TypeScript",
+    ket: "Language",
+    dad: "2700",
+  },
+  {
+    id: 28,
+    gambar: "/assets/tools/git.svg",
+    nama: "Git",
+    ket: "Control de versiones",
+    dad: "2800",
+  },
+  {
+    id: 29,
+    gambar: "/assets/tools/aws.svg",
+    nama: "AWS",
+    ket: "Cloud / Hosting",
+    dad: "2900",
+  },
+  {
+    id: 30,
+    gambar: "/assets/tools/docker.svg",
+    nama: "Docker",
+    ket: "Contenedores",
+    dad: "3000",
+  },
+  {
+    id: 31,
+    gambar: "/assets/tools/googleanalytics.svg",
+    nama: "Google Analytics",
+    ket: "Analítica web",
+    dad: "3100",
+  },
+  {
+    id: 32,
+    gambar: "/assets/tools/postman.svg",
+    nama: "Postman",
+    ket: "Testing de APIs",
+    dad: "3200",
+  },
+  {
+    id: 33,
+    gambar: "/assets/tools/sass.svg",
+    nama: "Sass",
+    ket: "Preprocesador CSS",
+    dad: "3300",
+  },
 ];
 
 export const listProyek = [

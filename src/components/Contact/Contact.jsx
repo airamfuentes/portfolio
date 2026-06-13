@@ -31,7 +31,7 @@ export default function Contact() {
       data-aos-duration="1000"
       data-aos-once="true"
     >
-      <h2 className="text-4xl font-bold mb-2 text-center">Contacto</h2>
+      <h2 className="text-4xl font-bold mb-2 text-center gradient-text w-fit mx-auto">Contacto</h2>
       <p className="text-base text-center opacity-50 mb-10">
         ¿Tienes un proyecto en mente? Escríbeme
       </p>

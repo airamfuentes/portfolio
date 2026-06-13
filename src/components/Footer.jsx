@@ -1,42 +1,67 @@
 import "remixicon/fonts/remixicon.css";
-import Dock from "./Dock/Dock";
-import { VscHome, VscArchive, VscAccount, VscMail } from "react-icons/vsc";
 
 const Footer = () => {
-  const items = [
-    { icon: <VscHome size={18} />, label: "Inicio", onClick: () => document.getElementById("home")?.scrollIntoView({ behavior: "smooth" }) },
-    { icon: <VscAccount size={18} />, label: "Sobre mí", onClick: () => document.getElementById("about")?.scrollIntoView({ behavior: "smooth" }) },
-    { icon: <VscArchive size={18} />, label: "Proyectos", onClick: () => document.getElementById("project")?.scrollIntoView({ behavior: "smooth" }) },
-    { icon: <VscMail size={18} />, label: "Contacto", onClick: () => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" }) },
+  const year = new Date().getFullYear();
+
+  const links = [
+    { href: "#home", label: "Inicio" },
+    { href: "#about", label: "Sobre mí" },
+    { href: "#experience", label: "Trayectoria" },
+    { href: "#project", label: "Proyectos" },
+    { href: "#contact", label: "Contacto" },
   ];
 
   return (
-    <div className="mt-32 pb-8 flex flex-col items-center relative z-10">
-      {/* Flex container adaptif */}
-      <div className="w-full flex flex-col md:flex-row items-center md:justify-between gap-6">
-        
-        {/* Judul - paling atas di mobile */}
-        <h1 className="text-2xl font-bold order-1 md:order-none">
-          airamfuentes
-        </h1>
+    <footer className="mt-32 pb-10 relative z-10">
+      <div className="section-divider" />
 
-        {/* Ikon Sosmed - di tengah di mobile */}
-        <div className="flex gap-3 order-2 md:order-none">
-          <a href="https://github.com/airamfuentes"><i className="ri-github-fill ri-2x"></i></a>
+      <div className="w-full flex flex-col md:flex-row items-center md:items-start md:justify-between gap-8 text-center md:text-left">
+        {/* Marca */}
+        <div className="flex flex-col items-center md:items-start gap-2">
+          <h1 className="text-2xl font-bold">airamfuentes</h1>
+          <p className="text-sm opacity-60 max-w-xs">
+            Desarrollador web · Lanzarote, España
+          </p>
         </div>
 
-        {/* Dock - paling bawah di mobile */}
-        <div className="order-3 md:order-none mt-15 md:mt-0  md:mb-0">
-          <Dock 
-            items={items}
-            panelHeight={30}
-            baseItemSize={60}
-            magnification={100}
-          />
-        </div>
+        {/* Navegación */}
+        <nav className="flex flex-wrap justify-center gap-x-6 gap-y-2">
+          {links.map((l) => (
+            <a
+              key={l.href}
+              href={l.href}
+              className="text-sm font-medium opacity-70 hover:opacity-100 hover:text-violet-400 transition-all"
+            >
+              {l.label}
+            </a>
+          ))}
+        </nav>
 
+        {/* Redes */}
+        <div className="flex gap-4">
+          <a
+            href="https://github.com/airamfuentes"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="GitHub"
+            className="w-10 h-10 grid place-items-center rounded-full border border-zinc-700 hover:border-violet-500/60 hover:text-violet-400 hover:-translate-y-1 transition-all duration-300 light-card"
+          >
+            <i className="ri-github-fill ri-lg"></i>
+          </a>
+          <a
+            href="mailto:airamfuentes2020@gmail.com"
+            aria-label="Email"
+            className="w-10 h-10 grid place-items-center rounded-full border border-zinc-700 hover:border-violet-500/60 hover:text-violet-400 hover:-translate-y-1 transition-all duration-300 light-card"
+          >
+            <i className="ri-mail-fill ri-lg"></i>
+          </a>
+        </div>
       </div>
-    </div>
+
+      <p className="text-center text-xs opacity-50 mt-10">
+        © {year} Airam Fuentes · Hecho con React + Vite
+      </p>
+    </footer>
   );
 };
 
