@@ -17,12 +17,10 @@ export default function ScrollProgress() {
 
   return (
     <div
-      className="fixed top-0 left-0 h-1 z-[100] transition-[width] duration-150 ease-out"
+      className="fixed top-0 left-0 h-0.5 z-[100] transition-[width] duration-150 ease-out"
       style={{
         width: `${progress}%`,
-        background:
-          "linear-gradient(90deg, #8b5cf6 0%, #06b6d4 50%, #10b981 100%)",
-        boxShadow: "0 0 10px rgba(139, 92, 246, 0.6)",
+        background: "var(--accent)",
       }}
     />
   );

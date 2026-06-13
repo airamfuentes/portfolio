@@ -187,10 +187,11 @@
   position: absolute;
   left: 50%;
   top: 50%;
-  /* scaleX(-1) mirrors the selfie so it reads the right way round */
-  transform: translate(-50%, -50%) scaleX(-1);
+  /* scaleX(-1) mirrors the selfie + scale(1.35) zooms to the face */
+  transform: translate(-50%, -50%) scale(1.35) scaleX(-1);
+  transform-origin: center center;
   object-fit: cover;
-  object-position: center top;
+  object-position: center 18%;
   opacity: calc(1.75 - var(--pointer-from-center));
 }
 

@@ -40,7 +40,7 @@ const ProjectModal = ({ isOpen, onClose, project }) => {
       {/* Modal Content */}
       <div
         onClick={(e) => e.stopPropagation()} // Mencegah modal tertutup saat diklik di dalam
-        className={`bg-zinc-900 border border-violet-500/50 rounded-2xl shadow-2xl shadow-violet-500/20 w-full max-w-lg transform transition-transform duration-300 ${isClosing ? 'animate-out' : 'animate-in'}`}
+        className={`bg-zinc-900 border border-zinc-700 rounded-2xl shadow-2xl w-full max-w-lg transform transition-transform duration-300 ${isClosing ? 'animate-out' : 'animate-in'}`}
       >
         {/* --- GAMBAR PROYEK --- */}
         <img 
@@ -69,7 +69,7 @@ const ProjectModal = ({ isOpen, onClose, project }) => {
                 href={project.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-4 inline-flex items-center justify-center gap-2 font-semibold bg-violet-600 p-3 px-5 rounded-full w-full cursor-pointer border border-transparent hover:bg-violet-700 transition-colors"
+                className="mt-4 inline-flex items-center justify-center gap-2 font-medium btn-accent p-3 px-5 rounded-full w-full cursor-pointer border border-transparent transition-colors"
             >
                 <FiGithub />
                 <span>Source Code</span>

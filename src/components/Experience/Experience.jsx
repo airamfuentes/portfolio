@@ -29,13 +29,7 @@ const education = [
   },
 ];
 
-function Timeline({ items, accent = "violet" }) {
-  const accentMap = {
-    violet: "bg-violet-600 border-zinc-900",
-    cyan: "bg-cyan-500 border-zinc-900",
-  };
-  const textAccent = accent === "violet" ? "text-violet-400" : "text-cyan-400";
-
+function Timeline({ items }) {
   return (
     <div className="relative">
       <div className="absolute left-4 top-0 bottom-0 w-px bg-zinc-700 hidden sm:block" />
@@ -50,10 +44,11 @@ function Timeline({ items, accent = "violet" }) {
             data-aos-once="true"
           >
             <span
-              className={`hidden sm:block absolute left-0 top-3 w-8 h-8 rounded-full border-4 ${accentMap[accent]} z-10`}
+              className="hidden sm:block absolute left-0 top-3 w-8 h-8 rounded-full border-4 border-zinc-900 z-10"
+              style={{ background: "var(--accent)" }}
             />
-            <div className="rounded-2xl border border-zinc-700 bg-zinc-900/60 backdrop-blur-md p-6 shadow-md hover:border-violet-500/60 transition-all duration-300 hover:translate-x-1 light-card">
-              <span className={`text-xs font-semibold ${textAccent} uppercase tracking-widest`}>
+            <div className="rounded-2xl border border-zinc-700/80 bg-zinc-900/50 backdrop-blur-md p-6 hover:border-zinc-500/70 transition-all duration-300 hover:translate-x-1 light-card">
+              <span className="text-xs font-semibold accent-text uppercase tracking-widest">
                 {exp.year}
               </span>
               <h3 className="text-lg font-bold mt-1">{exp.role}</h3>
@@ -82,18 +77,18 @@ export default function Experience() {
       <div className="grid md:grid-cols-2 gap-10">
         <div>
           <h3 className="text-xl font-semibold mb-6 flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-violet-500 inline-block" />
+            <span className="w-2 h-2 rounded-full inline-block" style={{ background: "var(--accent)" }} />
             Experiencia laboral
           </h3>
-          <Timeline items={experiences} accent="violet" />
+          <Timeline items={experiences} />
         </div>
 
         <div>
           <h3 className="text-xl font-semibold mb-6 flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-cyan-500 inline-block" />
+            <span className="w-2 h-2 rounded-full inline-block" style={{ background: "var(--accent)" }} />
             Formación académica
           </h3>
-          <Timeline items={education} accent="cyan" />
+          <Timeline items={education} />
         </div>
       </div>
     </section>

@@ -29,10 +29,10 @@ const Navbar = ({ hidden = false }) => {
             transition-all md:transition-none
             ${active ? "top-0 opacity-100" : "-top-10 opacity-0"}`}
         >
-          <li><a href="#home" className="sm:text-lg text-base font-medium hover:text-violet-400 transition-colors">Inicio</a></li>
-          <li><a href="#about" className="sm:text-lg text-base font-medium hover:text-violet-400 transition-colors">Sobre mí</a></li>
-          <li><a href="#project" className="sm:text-lg text-base font-medium hover:text-violet-400 transition-colors">Proyectos</a></li>
-          <li><a href="#contact" className="sm:text-lg text-base font-medium hover:text-violet-400 transition-colors">Contacto</a></li>
+          <li><a href="#home" className="sm:text-lg text-base font-medium hover:opacity-70 transition-opacity">Inicio</a></li>
+          <li><a href="#about" className="sm:text-lg text-base font-medium hover:opacity-70 transition-opacity">Sobre mí</a></li>
+          <li><a href="#project" className="sm:text-lg text-base font-medium hover:opacity-70 transition-opacity">Proyectos</a></li>
+          <li><a href="#contact" className="sm:text-lg text-base font-medium hover:opacity-70 transition-opacity">Contacto</a></li>
         </ul>
 
         <ThemeToggle />

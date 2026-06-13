@@ -46,6 +46,10 @@ function Band({ maxSpeed = 50, minSpeed = 0 }) {
   const texture = useTexture(lanyard);
   const profileTexture = useTexture(profilePic, (tex) => {
     tex.flipY = false;
+    // Zoom into the face: sample a smaller, centered region of the photo
+    const zoom = 0.72;
+    tex.repeat.set(zoom, zoom);
+    tex.offset.set((1 - zoom) / 2, (1 - zoom) / 2 + 0.06);
     tex.needsUpdate = true;
   });
   const [curve] = useState(() => new THREE.CatmullRomCurve3([new THREE.Vector3(), new THREE.Vector3(), new THREE.Vector3(), new THREE.Vector3()]));

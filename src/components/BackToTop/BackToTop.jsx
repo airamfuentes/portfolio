@@ -17,7 +17,7 @@ export default function BackToTop() {
     <button
       onClick={scrollUp}
       aria-label="Volver arriba"
-      className={`fixed bottom-6 right-6 z-50 w-12 h-12 rounded-full border border-violet-500/40 bg-zinc-900/80 backdrop-blur-md shadow-lg flex items-center justify-center text-violet-300 hover:bg-violet-600 hover:text-white transition-all duration-300 ${
+      className={`fixed bottom-6 right-6 z-50 w-12 h-12 rounded-full border border-zinc-600/60 bg-zinc-900/80 backdrop-blur-md shadow-lg flex items-center justify-center text-zinc-300 hover:bg-zinc-700 hover:text-white transition-all duration-300 ${
         visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"
       }`}
     >

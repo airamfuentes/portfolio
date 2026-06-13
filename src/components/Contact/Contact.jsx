@@ -31,7 +31,7 @@ export default function Contact() {
       data-aos-duration="1000"
       data-aos-once="true"
     >
-      <h2 className="text-4xl font-bold mb-2 text-center gradient-text w-fit mx-auto">Contacto</h2>
+      <h2 className="text-4xl font-bold mb-2 text-center">Contacto</h2>
       <p className="text-base text-center opacity-50 mb-10">
         ¿Tienes un proyecto en mente? Escríbeme
       </p>
@@ -45,7 +45,7 @@ export default function Contact() {
               required
               type="text"
               placeholder="Tu nombre"
-              className="bg-zinc-800/60 border border-zinc-700 rounded-xl px-4 py-3 text-white placeholder-zinc-500 focus:outline-none focus:border-violet-500 transition-colors"
+              className="bg-zinc-800/60 border border-zinc-700 rounded-xl px-4 py-3 text-white placeholder-zinc-500 focus:outline-none focus:border-zinc-400 transition-colors"
             />
           </div>
           <div className="flex flex-col gap-1">
@@ -55,7 +55,7 @@ export default function Contact() {
               required
               type="email"
               placeholder="tu@email.com"
-              className="bg-zinc-800/60 border border-zinc-700 rounded-xl px-4 py-3 text-white placeholder-zinc-500 focus:outline-none focus:border-violet-500 transition-colors"
+              className="bg-zinc-800/60 border border-zinc-700 rounded-xl px-4 py-3 text-white placeholder-zinc-500 focus:outline-none focus:border-zinc-400 transition-colors"
             />
           </div>
           <div className="flex flex-col gap-1">
@@ -65,14 +65,14 @@ export default function Contact() {
               required
               rows={5}
               placeholder="Cuéntame tu idea..."
-              className="bg-zinc-800/60 border border-zinc-700 rounded-xl px-4 py-3 text-white placeholder-zinc-500 focus:outline-none focus:border-violet-500 transition-colors resize-none"
+              className="bg-zinc-800/60 border border-zinc-700 rounded-xl px-4 py-3 text-white placeholder-zinc-500 focus:outline-none focus:border-zinc-400 transition-colors resize-none"
             />
           </div>
 
           <button
             type="submit"
             disabled={status === "sending"}
-            className="w-full py-3 rounded-xl bg-violet-600 hover:bg-violet-500 disabled:opacity-50 font-semibold transition-all duration-300 text-white"
+            className="w-full py-3 rounded-xl btn-accent disabled:opacity-50 font-medium transition-all duration-300 text-white"
           >
             {status === "sending" ? "Enviando..." : "Enviar mensaje"}
           </button>

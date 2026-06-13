@@ -195,13 +195,6 @@ export const listTools = [
     ket: "Testing de APIs",
     dad: "3200",
   },
-  {
-    id: 33,
-    gambar: "/assets/tools/sass.svg",
-    nama: "Sass",
-    ket: "Preprocesador CSS",
-    dad: "3300",
-  },
 ];
 
 export const listProyek = [
@@ -211,8 +204,8 @@ export const listProyek = [
     subtitle: "Plataforma de comercio local y sostenible en Lanzarote",
     handle: "#Laravel · #Vue3 · #Inertia",
     location: "Lanzarote, España",
-    borderColor: "#7c3aed",
-    gradient: "linear-gradient(135deg, #1e1b2e 0%, #2d1b4e 50%, #0f172a 100%)",
+    borderColor: "#4f46e5",
+    gradient: "linear-gradient(135deg, #18181b 0%, #1e1b3a 55%, #0f172a 100%)",
     fullDescription:
       "Rustikan es una plataforma de marketplace y entrega de comida local que conecta productores, agricultores y artesanos de Lanzarote con consumidores. Incluye sistema de pagos con Stripe y Rusticoin (moneda propia), seguimiento de pedidos, chat en vivo, panel de productor, panel de almacén y panel de administración. Desarrollada con Laravel 12, Vue 3, Inertia.js, Tailwind CSS y MySQL. Multilingüe: español, inglés, francés, alemán e italiano.",
     url: "https://github.com/airamfuentes/rustikan",

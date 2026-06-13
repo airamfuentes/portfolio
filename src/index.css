@@ -7,15 +7,62 @@
   }
 }
 
+/* ── Design tokens ───────────────────────────────────────────────── */
+:root {
+  /* Single muted accent (slate-indigo) used across the whole site */
+  --accent: #818cf8;        /* soft indigo */
+  --accent-strong: #6366f1; /* for solid buttons */
+}
+
+:root.light {
+  --accent: #4f46e5;
+  --accent-strong: #4338ca;
+}
+
 /* ── Base theme (dark by default, before React applies a class) ───── */
 body {
-  background-color: #18181b; /* zinc-900 */
-  color: #ffffff;
+  background-color: #0f0f11;
+  color: #f4f4f5;
 }
 
 :root.dark body {
-  background-color: #18181b;
-  color: #ffffff;
+  background-color: #0f0f11;
+  color: #f4f4f5;
+}
+
+/* Muted accent text helper */
+.accent-text {
+  color: var(--accent);
+}
+
+/* ── Cursor spotlight (subtle, fixed, behind content) ───────────── */
+.spotlight {
+  position: fixed;
+  inset: 0;
+  z-index: -5;
+  pointer-events: none;
+  background: radial-gradient(
+    340px circle at var(--mx, 50%) var(--my, 50%),
+    rgba(129, 140, 248, 0.07),
+    transparent 70%
+  );
+  transition: background 0.15s ease-out;
+}
+
+:root.light .spotlight {
+  background: radial-gradient(
+    340px circle at var(--mx, 50%) var(--my, 50%),
+    rgba(79, 70, 229, 0.06),
+    transparent 70%
+  );
+}
+
+/* Solid accent button (sober indigo, no neon glow) */
+.btn-accent {
+  background: var(--accent-strong);
+}
+.btn-accent:hover {
+  filter: brightness(1.08);
 }
 
 /* ── Scrollbar ──────────────────────────────────────────────────── */
@@ -26,16 +73,16 @@ body {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #8b5cf6, #06b6d4);
+  background: #3f3f46;
   border-radius: 999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #a78bfa, #22d3ee);
+  background: #52525b;
 }
 
 /* ── Selección de texto ─────────────────────────────────────────── */
 ::selection {
-  background: rgba(139, 92, 246, 0.35);
+  background: rgba(99, 102, 241, 0.3);
   color: #fff;
 }
 
@@ -113,12 +160,8 @@ body {
   color: #18181b;
 }
 
-:root.light .bg-gradient-to-br.from-\[\#0a0a0a\] {
+:root.light .bg-gradient-to-br.from-\[\#0d0d0f\] {
   background: linear-gradient(135deg, #ffffff 0%, #f4f4f5 50%, #fafafa 100%) !important;
-}
-
-:root.light .shadow-\[0_0_30px_rgba\(168\,85\,247\,0\.4\)\] {
-  box-shadow: 0 0 30px rgba(168, 85, 247, 0.18) !important;
 }
 
 /* Aurora atenuada en modo claro */
@@ -148,21 +191,23 @@ body {
   margin: 4rem 0;
 }
 
-/* ── Animated gradient text (headings) ──────────────────────────── */
+/* ── Section headings: solid, sober, with a subtle accent underline ─ */
 .gradient-text {
-  background: linear-gradient(90deg, #a78bfa, #22d3ee, #a78bfa);
-  background-size: 200% auto;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-  animation: gradient-pan 6s linear infinite;
+  position: relative;
+  display: inline-block;
+  color: inherit;
+  padding-bottom: 0.35rem;
 }
-
-@keyframes gradient-pan {
-  to {
-    background-position: 200% center;
-  }
+.gradient-text::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 2.5rem;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--accent);
+  opacity: 0.85;
 }
 
 /* ── Scroll-down hint in hero ───────────────────────────────────── */
@@ -193,14 +238,13 @@ body {
   100% { opacity: 0; }
 }
 
-/* ── Tool card hover: subtle glow on the icon ───────────────────── */
+/* ── Tool card hover: very subtle neutral lift on the icon ──────── */
 .tools-box .group:hover img {
-  filter: drop-shadow(0 0 8px rgba(139, 92, 246, 0.45));
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.35));
 }
 
-/* ── Reveal-on-hover sheen for cards ────────────────────────────── */
+/* ── Respect reduced motion ─────────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
-  .gradient-text,
   .scroll-hint::after {
     animation: none;
   }

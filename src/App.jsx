@@ -33,10 +33,10 @@ function App() {
     <>
       <div className="aurora-wrapper absolute top-0 left-0 w-full h-full -z-10">
         <Aurora
-          colorStops={["#577870", "#1F97A6", "#127B99"]}
-          blend={0.5}
-          amplitude={1.0}
-          speed={0.5}
+          colorStops={["#1e1b3a", "#3b3a5c", "#1e293b"]}
+          blend={0.4}
+          amplitude={0.8}
+          speed={0.35}
         />
       </div>
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -58,13 +58,13 @@ function App() {
             <div className="flex flex-wrap items-center sm:gap-4 gap-3">
               <a
                 href="#project"
-                className="font-semibold bg-violet-600 hover:bg-violet-500 p-4 px-6 rounded-full text-white transition-all duration-300 shadow-lg shadow-violet-500/30 hover:shadow-violet-500/50 hover:-translate-y-0.5"
+                className="font-medium btn-accent p-4 px-6 rounded-full text-white transition-all duration-300 hover:-translate-y-0.5"
               >
                 Ver proyectos
               </a>
               <a
                 href="#contact"
-                className="font-semibold bg-[#1a1a1a] p-4 px-6 rounded-full border border-gray-700 hover:bg-[#222] hover:border-violet-500/50 transition-all hover:-translate-y-0.5"
+                className="font-medium bg-zinc-900/60 p-4 px-6 rounded-full border border-zinc-700 hover:border-zinc-500 hover:bg-zinc-800/60 transition-all hover:-translate-y-0.5"
               >
                 <ShinyText text="Contáctame" disabled={false} speed={3} className="custom-class" />
               </a>
@@ -100,11 +100,11 @@ function App() {
 
         {/* ── SOBRE MÍ ────────────────────────────────────────── */}
         <div
-          className="mt-32 mx-auto w-full max-w-[1600px] rounded-3xl border-[5px] border-white-500/40 shadow-[0_0_30px_rgba(168,85,247,0.4)] bg-gradient-to-br from-[#0a0a0a] via-[#111111] to-[#1a1a1a] p-6 light-card"
+          className="mt-32 mx-auto w-full max-w-[1600px] rounded-3xl border border-zinc-800 shadow-[0_8px_40px_rgba(0,0,0,0.35)] bg-gradient-to-br from-[#0d0d0f] via-[#111113] to-[#161618] p-6 light-card"
           id="about"
         >
           <div className="flex flex-col md:flex-row items-center justify-between gap-10 pt-0 px-8" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
-            <div className="basis-full md:basis-7/12 pr-0 md:pr-8 border-b md:border-b-0 md:border-r border-white-500/30">
+            <div className="basis-full md:basis-7/12 pr-0 md:pr-8 border-b md:border-b-0 md:border-r border-zinc-800">
               <div className="flex-1 text-left">
                 <h2 className="text-3xl md:text-4xl font-bold text-white mb-5">
                   Sobre mí
@@ -120,7 +120,7 @@ function App() {
                   text='El mejor modo de predecir el futuro es inventándotelo... "Alan Kay"'
                   disabled={false}
                   speed={3}
-                  className="text-sm md:text-base text-violet-400"
+                  className="text-sm md:text-base accent-text"
                 />
               </div>
             </div>
@@ -142,7 +142,7 @@ function App() {
                 data-aos-duration="1000"
                 data-aos-delay={tool.dad}
                 data-aos-once="true"
-                className="flex items-center gap-4 p-4 border border-zinc-700 rounded-xl bg-zinc-900/60 backdrop-blur-md hover:bg-zinc-800/80 hover:border-violet-500/60 hover:-translate-y-1 transition-all duration-300 group shadow-lg light-card"
+                className="flex items-center gap-4 p-4 border border-zinc-700/80 rounded-xl bg-zinc-900/50 backdrop-blur-md hover:bg-zinc-800/60 hover:border-zinc-500/70 hover:-translate-y-1 transition-all duration-300 group light-card"
               >
                 <img
                   src={tool.gambar}
@@ -173,7 +173,7 @@ function App() {
         <div className="proyek mt-32 py-10" id="project" />
         <h1 className="text-center text-4xl font-bold mb-2 gradient-text w-fit mx-auto" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">Proyectos</h1>
         <p className="text-base/loose text-center opacity-50" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" data-aos-once="true">Algunas ideas y trabajos que desarrollé o sigo en proceso</p>
-        <p className="text-center text-yellow-300 mt-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400" data-aos-once="true">Más proyectos próximamente</p>
+        <p className="text-center text-sm opacity-50 mt-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400" data-aos-once="true">Más proyectos próximamente</p>
         <div className="proyek-box mt-14">
           <div style={{ height: 'auto', position: 'relative' }} data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400" data-aos-once="true">
             <ChromaGrid
