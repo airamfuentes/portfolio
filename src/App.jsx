@@ -88,6 +88,7 @@ function App() {
               status="Coding..."
               contactText="Contáctame"
               avatarUrl="./assets/profile_photo.webp"
+              miniAvatarUrl="./assets/foto_card.png"
               showUserInfo={true}
               enableTilt={true}
               enableMobileTilt={false}

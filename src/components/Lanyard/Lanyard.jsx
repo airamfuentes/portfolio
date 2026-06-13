@@ -46,11 +46,11 @@ function Band({ maxSpeed = 50, minSpeed = 0 }) {
   const texture = useTexture(lanyard);
   const profileTexture = useTexture(profilePic, (tex) => {
     tex.flipY = false;
-    // foto_card.png is already a well-framed portrait, so show it almost
-    // full with only a tiny centered zoom to fill the card edges.
-    const zoom = 0.96;
+    // foto_card.png is a well-framed portrait. Slight zoom to fill the card,
+    // plus a horizontal shift so the face sits centered on the card.
+    const zoom = 0.92;
     tex.repeat.set(zoom, zoom);
-    tex.offset.set((1 - zoom) / 2, (1 - zoom) / 2);
+    tex.offset.set((1 - zoom) / 2 + 0.06, (1 - zoom) / 2);
     tex.needsUpdate = true;
   });
   const [curve] = useState(() => new THREE.CatmullRomCurve3([new THREE.Vector3(), new THREE.Vector3(), new THREE.Vector3(), new THREE.Vector3()]));
