@@ -9,7 +9,7 @@ import { MeshLineGeometry, MeshLineMaterial } from 'meshline';
 // replace with your own imports, see the usage snippet for details
 const cardGLB = "/assets/card.glb";
 const lanyard = "/assets/lanyard.png";
-const profilePic = "/assets/profile_photo.webp";
+const profilePic = "/assets/foto_card.png";
 
 import * as THREE from 'three';
 import './Lanyard.css';
@@ -46,12 +46,11 @@ function Band({ maxSpeed = 50, minSpeed = 0 }) {
   const texture = useTexture(lanyard);
   const profileTexture = useTexture(profilePic, (tex) => {
     tex.flipY = false;
-    // Gentle, mostly-centered zoom so the face sits in the middle of
-    // the card without risking cropping it out. Symmetric on X; a small
-    // vertical nudge accounts for flipY=false (V axis inverted).
-    const zoom = 0.86;
+    // foto_card.png is already a well-framed portrait, so show it almost
+    // full with only a tiny centered zoom to fill the card edges.
+    const zoom = 0.96;
     tex.repeat.set(zoom, zoom);
-    tex.offset.set((1 - zoom) / 2, (1 - zoom) / 2 + 0.04);
+    tex.offset.set((1 - zoom) / 2, (1 - zoom) / 2);
     tex.needsUpdate = true;
   });
   const [curve] = useState(() => new THREE.CatmullRomCurve3([new THREE.Vector3(), new THREE.Vector3(), new THREE.Vector3(), new THREE.Vector3()]));
