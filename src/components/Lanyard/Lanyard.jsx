@@ -50,7 +50,7 @@ function Band({ maxSpeed = 50, minSpeed = 0 }) {
     // plus a horizontal shift so the face sits centered on the card.
     const zoom = 0.92;
     tex.repeat.set(zoom, zoom);
-    tex.offset.set((1 - zoom) / 2 + 0.12, (1 - zoom) / 2);
+    tex.offset.set((1 - zoom) / 2 + 0.18, (1 - zoom) / 2);
     tex.needsUpdate = true;
   });
   const [curve] = useState(() => new THREE.CatmullRomCurve3([new THREE.Vector3(), new THREE.Vector3(), new THREE.Vector3(), new THREE.Vector3()]));
