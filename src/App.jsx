@@ -137,12 +137,12 @@ function App() {
           <h1 className="text-4xl/snug font-bold mb-4 gradient-text w-fit" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">Herramientas / Tecnologías</h1>
           <p className="md:w-2/5 text-base/loose opacity-50" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" data-aos-once="true">Mi stack principal</p>
           <div className="tools-box mt-14 grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
-            {listTools.map((tool) => (
+            {listTools.map((tool, i) => (
               <div
                 key={tool.id}
                 data-aos="fade-up"
-                data-aos-duration="1000"
-                data-aos-delay={tool.dad}
+                data-aos-duration="800"
+                data-aos-delay={(i % 4) * 100}
                 data-aos-once="true"
               >
                 <TiltCard className="flex items-center gap-4 p-4 border border-zinc-700/80 rounded-xl bg-zinc-900/50 backdrop-blur-md hover:bg-zinc-800/60 hover:border-zinc-500/70 transition-colors duration-300 group light-card">
