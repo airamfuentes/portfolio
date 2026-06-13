@@ -203,7 +203,6 @@ export const listProyek = [
     title: "Rustikan",
     subtitle: "Plataforma de comercio local y sostenible en Lanzarote",
     handle: "#Laravel · #Vue3 · #Inertia",
-    location: "Lanzarote, España",
     borderColor: "#4f46e5",
     gradient: "linear-gradient(135deg, #18181b 0%, #1e1b3a 55%, #0f172a 100%)",
     fullDescription:

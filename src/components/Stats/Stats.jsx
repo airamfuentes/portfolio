@@ -1,8 +1,10 @@
+import CountUp from "../CountUp/CountUp";
+
 const stats = [
-  { value: "2+", label: "Años programando" },
-  { value: "5+", label: "Tecnologías dominadas" },
-  { value: "B2", label: "Nivel de inglés" },
-  { value: "100%", label: "Pasión por el código" },
+  { to: 2, suffix: "+", label: "Años programando" },
+  { to: 5, suffix: "+", label: "Tecnologías dominadas" },
+  { prefix: "B", to: 2, suffix: "", label: "Nivel de inglés" },
+  { to: 100, suffix: "%", label: "Pasión por el código" },
 ];
 
 export default function Stats() {
@@ -22,8 +24,10 @@ export default function Stats() {
             data-aos-once="true"
             className="rounded-2xl border border-zinc-700/80 bg-zinc-900/50 backdrop-blur-md p-6 text-center transition-colors duration-300 hover:border-zinc-500/60 light-card"
           >
-            <p className="text-4xl md:text-5xl font-semibold accent-text">
-              {s.value}
+            <p className="text-4xl md:text-5xl font-semibold accent-text flex items-baseline justify-center">
+              {s.prefix && <span>{s.prefix}</span>}
+              <CountUp to={s.to} duration={1.6} />
+              {s.suffix && <span>{s.suffix}</span>}
             </p>
             <p className="text-sm opacity-60 mt-2">{s.label}</p>
           </div>

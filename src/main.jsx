@@ -9,6 +9,7 @@ import ScrollProgress from './components/ScrollProgress/ScrollProgress.jsx'
 import BackToTop from './components/BackToTop/BackToTop.jsx'
 import Spotlight from './components/Spotlight/Spotlight.jsx'
 import { ThemeProvider } from './context/ThemeContext.jsx'
+import "remixicon/fonts/remixicon.css"
 import "animate.css"
 import AOS from 'aos';
 import 'aos/dist/aos.css';

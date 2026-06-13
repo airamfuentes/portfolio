@@ -10,6 +10,7 @@ import Aurora from "./components/Aurora/Aurora";
 import Experience from "./components/Experience/Experience";
 import Contact from "./components/Contact/Contact";
 import Stats from "./components/Stats/Stats";
+import TiltCard from "./components/TiltCard/TiltCard";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 AOS.init();
@@ -110,7 +111,7 @@ function App() {
                   Sobre mí
                 </h2>
                 <BlurText
-                  text="Soy Airam Fuentes, estudiante y apasionado del desarrollo web. Fiel representante de que la innovación siempre es la clave y lo creativo siempre se impone"
+                  text="Soy Airam Fuentes, estudiante y apasionado del desarrollo web. Fiel representante de que la innovación siempre es la clave y lo creativo siempre se impone."
                   delay={150}
                   animateBy="words"
                   direction="top"
@@ -142,25 +143,26 @@ function App() {
                 data-aos-duration="1000"
                 data-aos-delay={tool.dad}
                 data-aos-once="true"
-                className="flex items-center gap-4 p-4 border border-zinc-700/80 rounded-xl bg-zinc-900/50 backdrop-blur-md hover:bg-zinc-800/60 hover:border-zinc-500/70 hover:-translate-y-1 transition-all duration-300 group light-card"
               >
-                <img
-                  src={tool.gambar}
-                  alt={tool.nama}
-                  loading="lazy"
-                  className="w-16 h-16 object-contain bg-zinc-800 p-2 rounded-lg group-hover:bg-zinc-900 transition-all duration-300"
-                />
-                <div className="flex flex-col overflow-hidden">
-                  <div className="truncate">
-                    <ShinyText
-                      text={tool.nama}
-                      disabled={false}
-                      speed={3}
-                      className="text-lg font-semibold block"
-                    />
+                <TiltCard className="flex items-center gap-4 p-4 border border-zinc-700/80 rounded-xl bg-zinc-900/50 backdrop-blur-md hover:bg-zinc-800/60 hover:border-zinc-500/70 transition-colors duration-300 group light-card">
+                  <img
+                    src={tool.gambar}
+                    alt={tool.nama}
+                    loading="lazy"
+                    className="w-16 h-16 object-contain bg-zinc-800 p-2 rounded-lg group-hover:bg-zinc-900 transition-all duration-300"
+                  />
+                  <div className="flex flex-col overflow-hidden">
+                    <div className="truncate">
+                      <ShinyText
+                        text={tool.nama}
+                        disabled={false}
+                        speed={3}
+                        className="text-lg font-semibold block"
+                      />
+                    </div>
+                    <p className="text-sm text-zinc-400 truncate">{tool.ket}</p>
                   </div>
-                  <p className="text-sm text-zinc-400 truncate">{tool.ket}</p>
-                </div>
+                </TiltCard>
               </div>
             ))}
           </div>

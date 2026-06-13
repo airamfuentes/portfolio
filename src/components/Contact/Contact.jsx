@@ -5,9 +5,12 @@ const SERVICE_ID = "service_portfolio";
 const TEMPLATE_ID = "template_contact";
 const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
+const EMAIL = "airamfuentes2020@gmail.com";
+
 export default function Contact() {
   const formRef = useRef(null);
   const [status, setStatus] = useState("idle"); // idle | sending | ok | error
+  const [copied, setCopied] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -23,6 +26,16 @@ export default function Contact() {
     }
   };
 
+  const copyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText(EMAIL);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1800);
+    } catch {
+      window.location.href = `mailto:${EMAIL}`;
+    }
+  };
+
   return (
     <section
       id="contact"
@@ -31,10 +44,7 @@ export default function Contact() {
       data-aos-duration="1000"
       data-aos-once="true"
     >
-      <h2 className="text-4xl font-bold mb-2 text-center">Contacto</h2>
-      <p className="text-base text-center opacity-50 mb-10">
-        ¿Tienes un proyecto en mente? Escríbeme
-      </p>
+      <h2 className="text-4xl font-bold mb-10 text-center">Contacto</h2>
 
       <div className="max-w-xl mx-auto rounded-3xl border border-zinc-700 bg-zinc-900/60 backdrop-blur-md p-8 shadow-lg dark:bg-zinc-900/60 light-card">
         <form ref={formRef} onSubmit={handleSubmit} className="flex flex-col gap-5">
@@ -88,6 +98,18 @@ export default function Contact() {
             </p>
           )}
         </form>
+
+        <div className="mt-6 pt-6 border-t border-zinc-700/60 flex items-center justify-center">
+          <button
+            type="button"
+            onClick={copyEmail}
+            className="group inline-flex items-center gap-2 text-sm opacity-70 hover:opacity-100 transition-opacity"
+            aria-label="Copiar email"
+          >
+            <i className={`ri-${copied ? "check" : "file-copy"}-line accent-text`}></i>
+            <span>{copied ? "¡Email copiado!" : EMAIL}</span>
+          </button>
+        </div>
       </div>
     </section>
   );

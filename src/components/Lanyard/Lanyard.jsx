@@ -46,10 +46,12 @@ function Band({ maxSpeed = 50, minSpeed = 0 }) {
   const texture = useTexture(lanyard);
   const profileTexture = useTexture(profilePic, (tex) => {
     tex.flipY = false;
-    // Zoom into the face: sample a smaller, centered region of the photo
-    const zoom = 0.72;
+    // Gentle, mostly-centered zoom so the face sits in the middle of
+    // the card without risking cropping it out. Symmetric on X; a small
+    // vertical nudge accounts for flipY=false (V axis inverted).
+    const zoom = 0.86;
     tex.repeat.set(zoom, zoom);
-    tex.offset.set((1 - zoom) / 2, (1 - zoom) / 2 + 0.06);
+    tex.offset.set((1 - zoom) / 2, (1 - zoom) / 2 + 0.04);
     tex.needsUpdate = true;
   });
   const [curve] = useState(() => new THREE.CatmullRomCurve3([new THREE.Vector3(), new THREE.Vector3(), new THREE.Vector3(), new THREE.Vector3()]));
