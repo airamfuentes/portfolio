@@ -3,7 +3,7 @@ import emailjs from "@emailjs/browser";
 
 const SERVICE_ID = "service_2s4jctn";
 const TEMPLATE_ID = "template_p7tre8p";
-const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY?.trim();
 
 const EMAIL = "airamfuentes2020@gmail.com";
 
