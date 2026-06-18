@@ -1,8 +1,8 @@
 import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 
-const SERVICE_ID = "service_portfolio";
-const TEMPLATE_ID = "template_contact";
+const SERVICE_ID = "service_2s4jctn";
+const TEMPLATE_ID = "template_p7tre8p";
 const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
 const EMAIL = "airamfuentes2020@gmail.com";
