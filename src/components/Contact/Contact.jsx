@@ -1,9 +1,10 @@
 import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 
+// EmailJS public key is safe to expose — it ships in the client bundle by design.
 const SERVICE_ID = "service_2s4jctn";
 const TEMPLATE_ID = "template_p7tre8p";
-const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY?.trim();
+const PUBLIC_KEY = "6yAX0WTbHRirnhIpm";
 
 const EMAIL = "airamfuentes2020@gmail.com";
 
