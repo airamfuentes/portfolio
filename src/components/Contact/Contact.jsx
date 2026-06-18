@@ -21,7 +21,8 @@ export default function Contact() {
       });
       setStatus("ok");
       formRef.current.reset();
-    } catch {
+    } catch (err) {
+      console.error("EmailJS error:", err?.status, err?.text || err);
       setStatus("error");
     }
   };
