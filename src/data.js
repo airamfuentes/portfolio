@@ -209,5 +209,27 @@ export const listProyek = [
       "Rustikan es una plataforma de marketplace y entrega de comida local que conecta productores, agricultores y artesanos de Lanzarote con consumidores. Incluye sistema de pagos con Stripe y Rusticoin (moneda propia), seguimiento de pedidos, chat en vivo, panel de productor, panel de almacén y panel de administración. Desarrollada con Laravel 12, Vue 3, Inertia.js, Tailwind CSS y MySQL. Multilingüe: español, inglés, francés, alemán e italiano.",
     url: "https://github.com/airamfuentes/rustikan",
   },
+  {
+    image: "https://studio21barber.vercel.app/og.jpg",
+    title: "Studio 21 Barber",
+    subtitle: "Diseño, SEO y desarrollo web para una barbería en Lanzarote",
+    handle: "#NextJS · #React · #TypeScript",
+    borderColor: "#b8860b",
+    gradient: "linear-gradient(135deg, #18181b 0%, #2a2118 55%, #0f0f0f 100%)",
+    fullDescription:
+      "Diseño, SEO y desarrollo completo de la web de Studio 21, una barbería en Lanzarote con la que trabajo mano a mano, desde el primer boceto hasta el despliegue. Una web minimalista, creativa y full responsive que destaca frente al cliente, cumpliendo con los objetivos de negocio marcados. Desarrollada con Next.js 16, React 19 y TypeScript, con Tailwind CSS 4 para el diseño, Motion y Lenis para las animaciones y el scroll suave, y Playwright para testing end-to-end.",
+    url: "https://studio21barber.vercel.app/",
+  },
+  {
+    image: "https://opengraph.githubassets.com/1/airamfuentes/beepstream",
+    title: "BeepStream",
+    subtitle: "Censor de audio en tiempo real para streaming, 100% offline",
+    handle: "#Python · #Vosk · #Tkinter",
+    borderColor: "#dc2626",
+    gradient: "linear-gradient(135deg, #18181b 0%, #3a1e1e 55%, #0f172a 100%)",
+    fullDescription:
+      "BeepStream es una aplicación de escritorio para Windows que se sitúa entre el micrófono y OBS: transcribe el audio en tiempo real con Vosk (reconocimiento de voz 100% offline y en CPU) y, cuando detecta una palabra de la lista, sustituye ese fragmento por un tono antes de que llegue a la emisión, gracias a un buffer de 1.5 segundos. Incluye censura independiente de micrófono y audio de escritorio (vía loopback WASAPI), coincidencia fonética adaptada al español para evitar falsos positivos y negativos, editor de palabras integrado, modo de prueba y modo rendimiento. Desarrollada en Python con Vosk, sounddevice/PyAudioWPatch, NumPy para el procesamiento de señal e interfaz Tkinter a medida, empaquetada con PyInstaller e Inno Setup.",
+    url: "https://github.com/airamfuentes/beepstream",
+  },
 ];
 

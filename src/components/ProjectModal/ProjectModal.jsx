@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FiX, FiGithub } from 'react-icons/fi'; // Install react-icons jika belum: npm install react-icons
+import { FiX, FiGithub, FiExternalLink } from 'react-icons/fi'; // Install react-icons jika belum: npm install react-icons
 
 const ProjectModal = ({ isOpen, onClose, project }) => {
   // State untuk mengontrol animasi penutupan
@@ -30,6 +30,8 @@ const ProjectModal = ({ isOpen, onClose, project }) => {
 
 
   if (!isOpen) return null;
+
+  const isGithub = project.url?.includes('github.com');
 
   return (
     // Overlay
@@ -71,8 +73,8 @@ const ProjectModal = ({ isOpen, onClose, project }) => {
                 rel="noopener noreferrer"
                 className="mt-4 inline-flex items-center justify-center gap-2 font-medium btn-accent p-3 px-5 rounded-full w-full cursor-pointer border border-transparent transition-colors"
             >
-                <FiGithub />
-                <span>Source Code</span>
+                {isGithub ? <FiGithub /> : <FiExternalLink />}
+                <span>{isGithub ? 'Source Code' : 'Ver sitio web'}</span>
             </a>
         </div>
       </div>
